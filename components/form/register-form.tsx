@@ -14,6 +14,7 @@ import {
     FieldLabel,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import { registerEmail } from "@/lib/actions/auth-actions"
 
 export function RegisterForm({
     className,
@@ -29,11 +30,22 @@ export function RegisterForm({
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <form>
+                    <form action={registerEmail}>
                         <FieldGroup>
+                            <Field>
+                                <FieldLabel htmlFor="name">Name</FieldLabel>
+                                <Input
+                                name="name"
+                                    id="name"
+                                    type="name"
+                                    placeholder="John Doe"
+                                    required
+                                />
+                            </Field>
                             <Field>
                                 <FieldLabel htmlFor="email">Email</FieldLabel>
                                 <Input
+                                name="email"
                                     id="email"
                                     type="email"
                                     placeholder="m@example.com"
@@ -44,13 +56,13 @@ export function RegisterForm({
                                 <div className="flex items-center">
                                     <FieldLabel htmlFor="password">Password</FieldLabel>
                                 </div>
-                                <Input id="password" type="password" required />
+                                <Input name="password" id="password" type="password" required />
                             </Field>
                             <Field>
                                 <div className="flex items-center">
-                                    <FieldLabel htmlFor="password">Confirm Password</FieldLabel>
+                                    <FieldLabel htmlFor="confirm-password">Confirm Password</FieldLabel>
                                 </div>
-                                <Input id="password" type="password" required />
+                                <Input name="confirm-password" id="confirm-password" type="password" required />
                             </Field>
                             <Field>
                                 <Button type="submit">Register</Button>

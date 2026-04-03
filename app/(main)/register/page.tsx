@@ -7,7 +7,7 @@ export default function Register(){
 
     return (
         <div className="h-[90vh] flex items-center justify-center">
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2">
                 <RegisterForm />
             </div>
         </div>
