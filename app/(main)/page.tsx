@@ -25,27 +25,29 @@ export default async function Home() {
       </section>
 
       <section className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-        <FeatureCard
-          src="https://avatar.vercel.sh/shadcn1"
-          imgalt="Auto Farm Image"
-          title="Auto Farm"
-          description="Earn bucks and potions while AFK."
-          buttontext="Buy Now"
-        />
-        <FeatureCard
-          src="https://avatar.vercel.sh/shadcn1"
-          imgalt="Auto Farm Image"
-          title="Auto Farm"
-          description="Earn bucks and potions while AFK."
-          buttontext="Buy Now"
-        />
-        <FeatureCard
-          src="https://avatar.vercel.sh/shadcn1"
-          imgalt="Auto Farm Image"
-          title="Auto Farm"
-          description="Earn bucks and potions while AFK."
-          buttontext="Buy Now"
-        />
+<FeatureCard
+  src="https://production-gameflipusercontent.fingershock.com/us-east-1:0c5573cf-46b8-4dc3-80a9-71ae34e5bc33/97e1e9f1-d57d-4a7a-8603-fb539d60af05/b5119ce5-d749-45f3-8f5c-40ada778f369/640x640.webp"
+  imgalt="Auto Farm System"
+  title="Auto Farm"
+  description="Automatically earn bucks and potions while you're away. Stay efficient even when AFK."
+  buttontext="Buy Now"
+/>
+
+<FeatureCard
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt7vwX6RHLMxYAzhRZLKxM5sVAuU4rNDr0gA&s"
+  imgalt="Auto Feed Potion"
+  title="Auto Feed Potion"
+  description="Instantly use Age-Up potions on your pets to grow them faster without manual effort."
+  buttontext="Buy Now"
+/>
+
+<FeatureCard
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7CnmZAwTfghqrp1N8Mhl_-xPpe_oNzZTovA&s"
+  imgalt="Auto Buy System"
+  title="Auto Buy"
+  description="Automatically purchase pets and items with smart detection and fast execution."
+  buttontext="Buy Now"
+/>
       </section>
 
       <section id="pricing" className="mt-10 flex flex-col items-center text-center">

@@ -81,9 +81,15 @@ export default async function AccountsPage() {
 
 
   const apiKey = await getUserApiKey()
-  const LinkedAccounts = (await getAccountsLinked(apiKey[0].id)).length
-  const MaxAccounts = apiKey[0].maxRequests
-  const accounts = await getAccountsLinked(apiKey[0].id)
+  const apiKeyId = apiKey[0]?.id
+  
+  const accounts = apiKeyId
+    ? await getAccountsLinked(apiKeyId)
+    : []
+  
+  const LinkedAccounts = accounts.length
+  const MaxAccounts = apiKey[0]?.maxRequests ?? 0
+
   const accountsWithStatus = accounts.map((account) => {
     const FIVE_MINUTES = 5 * 60 * 1000;
 
