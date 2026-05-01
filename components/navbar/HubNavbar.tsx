@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "../ui/button"
+import { logoutEmail } from "@/lib/actions/auth-actions"
 
 export default function HubNavbar() {
     const pathname = usePathname()
@@ -12,7 +13,7 @@ export default function HubNavbar() {
         { name: "Accounts", href: "/accounts" },
         { name: "Inventory", href: "/inventory" },
         { name: "Scripts", href: "/scripts" },
-        { name: "Add-ons", href: "#add-ons" },
+        { name: "Add-ons", href: "/addons" },
     ]
 
     return (
@@ -53,7 +54,9 @@ export default function HubNavbar() {
                     />
                 </div>
 
-                <Button variant={"destructive"}>Logout</Button>
+                <Button variant={"destructive"} onClick={async () => {
+        await logoutEmail()
+    }}>Logout</Button>
             </div>
         </div>
     )
