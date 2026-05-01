@@ -35,7 +35,7 @@ const scripts = [
     RemoveAllUI = true,
     StatsTimer = 1, -- How long each resets
 }
-loadstring(game:HttpGet('https://raw.githubusercontent.com/dkjalsghfuiysdaiuyreiuwoqyrqwfdsafvzcx/Optimized-Revamped/refs/heads/main/FarmPet.lua'))()`,
+loadstring(game:HttpGet('https://raw.githubusercontent.com'))()`,
   },
   // Add more scripts here
 ];
